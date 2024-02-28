@@ -6,9 +6,9 @@ const Schema = mongoose.Schema;
 const houseSchema = new Schema({
     type: String, 
     address: String, 
-    bedsbaths: Number, 
+    bedsbaths: String, 
     //pictures: Image,
-    price: Number, 
+    price: String, 
     availableDate: Date, 
     reviews: ([])
 }, {

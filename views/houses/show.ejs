@@ -28,7 +28,7 @@
 </head>
 <body>
   
-    <h1>Add a New Home to Rent</h1>
+    <!-- <h1>Add a New Home to Rent</h1>
     <form action="/houses" method="POST">
         <label>Type:
             <input type="text" name="type">
@@ -43,7 +43,28 @@
             <input type="text" name="price">
         </label><br>
         <button type="submit">Add Home</button>
-    </form>
+    </form> -->
+
+
+    <section id="show-page">
+		<div>Type: </div>
+		<div>
+            <%= house.type %>
+		</div>
+		<div>Address: </div>
+		<div>
+            <%= house.address %>
+		</div>
+		<div>Beds/Baths: </div>
+		<div>
+            <%= house.bedsbaths %>
+		</div>
+		<div>Price: </div>
+		<div>
+            <%= house.price %>
+		</div>
+		
+	</section>
     
 </body>
 </html>

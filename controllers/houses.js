@@ -1,9 +1,34 @@
+// import our model so we can talk to the database and performs
+// our CRUD operations
 const HouseModel = require('../models/house')
+
 module.exports = {
     new: newHouse,
     create: create, 
     index, 
+    show
     
+}
+
+async function show(req, res){
+    try {
+
+        // req.params.id value is coming from the browsers request
+		// the name `.id` is defined in the routes/houses show route
+		// router.get('/:id', houseCtrl.show);
+        const houseFromTheDatabase = await HouseModel.findById(req.params.id)
+
+        console.log(houseFromTheDatabase);
+
+        res.render("houses/show", {
+            house: houseFromTheDatabase,
+        });
+    } catch (err) {
+        console.log(err)
+        res.send(err);
+
+    }
+
 }
 
 async function index(req, res){
@@ -24,7 +49,7 @@ async function create(req, res){
     for (let key in req.body) {
         if(req.body[key] === "") delete req.body[key];
     }
-    
+
     try{
         const houseFromTheDatabase = await HouseModel.create(req.body);
 

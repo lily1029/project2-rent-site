@@ -7,7 +7,7 @@ const houseSchema = new Schema({
     type: String, 
     address: String, 
     bedsbaths: Number, 
-    pictures: Image,
+    //pictures: Image,
     price: Number, 
     availableDate: Date, 
     reviews: ([])

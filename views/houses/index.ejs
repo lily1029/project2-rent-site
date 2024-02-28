@@ -6,10 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <nav>
-		<img src="/images/camera.svg">
+	<nav>
+		<img src="/images/logo.png" width="879" height="553">
 		<a href="/houses">ALL Homes</a>
 		<% if (user) { %>
 		  <a href="/houses/new"	>
@@ -17,9 +15,20 @@
 		  <a href="/houses/new" >Add NewHome</a>
 		  <a href="/logout">LOG OUT</a>
 		<% } else { %>
-		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" width="20" height="20"></a>
 		<% } %>
-	  </nav>
+	</nav>
+	<style>
+		body {background-image: url(https://i.imgur.com/9rzdzis.png);
+			  background-size: cover;
+			  background-repeat: no-repeat;
+		}
+	</style>
+	
+</head>
+<body>
+  
+
     
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<nav>
+		<img src="/images/logo.png" width="879" height="553">
+		<a href="/houses">ALL Homes</a>
+		<% if (user) { %>
+		  <a href="/houses/new"	>
+			  Rent</a>
+		  <a href="/houses/new" >Add NewHome</a>
+		  <a href="/logout">LOG OUT</a>
+		<% } else { %>
+		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" width="20" height="20"></a>
+		<% } %>
+	</nav>
+	<!-- <style>
+		body {background-image: url(https://i.imgur.com/9rzdzis.png);
+			  background-size: cover;
+			  background-repeat: no-repeat;
+		}
+	</style> -->
+	
+</head>
+<body>
+  
+    <h1>Add a New Home to Rent</h1>
+    <form action="/houses" method="POST">
+        <label>Type:
+            <input type="text" name="type">
+        </label><br>
+        <label>Address:
+            <input type="text" name="address">
+        </label><br>
+        <label>Beds/Baths:
+            <input type="text" name="bedsbaths">
+        </label><br>
+        <label>Price:
+            <input type="text" name="price">
+        </label><br>
+        <button type="submit">Add Home</button>
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+

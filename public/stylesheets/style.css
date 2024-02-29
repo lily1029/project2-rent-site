@@ -10,8 +10,8 @@
 body {
   margin: 0;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 90px 1fr;
+  display: grid; 
+  grid-template-rows: 90px 1fr; 
   grid-template-areas: 
     "nav"
     "main"
@@ -43,7 +43,7 @@ body > main {
 }
 
 body > main h1:first-child {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 nav > a {
@@ -65,7 +65,7 @@ nav > a.active {
 #new-form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
+  /* grid-template-columns: repeat(2, minmax(auto, 22rem)); */
 }
 
 #new-form *,
@@ -177,7 +177,12 @@ section {
 
 section div {
   border: 1px solid green;
-  width: 700px;
-  margin: 8px;
+  width: 598px;
+  margin: 8px 20px 8px 8px;
+  align-items: center;
 
+}
+
+.resize {
+  width: 586px;
 }

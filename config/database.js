@@ -1,11 +1,24 @@
-const mongoose = require('mongoose');
+// THE PURPOSE OF THIS FILE
+// is to establish a connection between our express server
+// and our database on mongodb atlas! 
 
-// replace your database connection string here
-mongoose.connect(process.env.DATABASE_URL);
+// mongoose is the module that allows us to create that connection!
+const mongoose = require("mongoose");
 
-const db = mongoose.connection;
+// export the function that creates a database connection
+module.exports = {
+  connectDB,
+};
 
-// database connection event
-db.on('connected', function () {
-  console.log(`Connected to MongoDB ${db.name} at ${db.host}:${db.port}`);
-});
+async function connectDB() {
+  try {
+    const conn = await mongoose.connect(process.env.DATABASE_URL);
+
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+
+  } catch (err) {
+    console.log("err");
+    console.log(err, ' connecting to mongodb')
+    process.exit(1);
+  }
+}

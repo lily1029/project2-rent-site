@@ -8,12 +8,13 @@
 	<link rel='stylesheet' href='/stylesheets/style.css' />
 	<style>
 		table, th, td {
-			border: 1px solid black;
+			border: 0px solid black;
 			/* text-align: left; */
 		}
 
 		th, td {
 			text-align: left;
+			padding: 0;
 		}
 	</style>
 	<nav>
@@ -41,7 +42,7 @@
 			  <p><%= h.address %></p>
 			  <p><%= h.bedsbaths %></p>
 			  <p><%= h.price %></p>
-			  <p><a href="/houses/<%= h._id %>">DETAILS</a></p>
+			  <p><a href="/houses/<%= h._id %>">details</a></p>
 			</div>
 			<% }); %>
 		</section> -->
@@ -50,9 +51,9 @@
 			<% houseDocs.forEach(function(h) { %>
 			  <div>
 				<table>
-					<tr><img src="<%= h.picture %>" /></tr>
+					<tr><img class="resize" src="<%= h.picture %>" /></tr>
 					<tr>
-						<th><%= h.price %></th>
+						<th>&nbsp;<%= h.price %></th>
 						<th></th>
 					</tr>
 
@@ -63,7 +64,7 @@
 
 					<tr>
 						<td><%= h.address %></td>
-						<td><a href="/houses/<%= h._id %>">DETAILS</a></td>
+						<td><a href="/houses/<%= h._id %>">details</a></td>
 					</tr>
 				</table>
 				

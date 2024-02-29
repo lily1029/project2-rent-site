@@ -36,7 +36,7 @@ const houseSchema = new Schema({
     type: String, 
     address: String, 
     bedsbaths: String, 
-    //pictures: Image,
+    picture: String,
     price: String, 
     availableDate: Date, 
     reviews: [reviewSchema]

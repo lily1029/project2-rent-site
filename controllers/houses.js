@@ -34,7 +34,7 @@ async function show(req, res){
 async function index(req, res){
     try {
         const houseDocumentsFromDB = await HouseModel.find({})
-        console.log(houseDocumentsFromDB)
+        // console.log(houseDocumentsFromDB)
         res.render('houses/index', {houseDocs: houseDocumentsFromDB})
 
     } catch(err){

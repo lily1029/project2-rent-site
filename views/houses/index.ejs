@@ -6,6 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			/* text-align: left; */
+		}
+
+		th, td {
+			text-align: left;
+		}
+	</style>
 	<nav>
 		<img src="/images/logo.png" width="879" height="553">
 		<a href="/houses">ALL Homes</a>
@@ -15,37 +25,51 @@
 		  <a href="/houses/new" >Add NewHome</a>
 		  <a href="/logout">LOG OUT</a>
 		<% } else { %>
-		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" width="20" height="20"></a>
+		  <a href="/auth/google" class="login">LOG IN&nbsp;</a>
 		<% } %>
-	</nav>
-	<style>
-		body {background-image: url(https://i.imgur.com/9rzdzis.png);
-			  background-size: cover;
-			  background-repeat: no-repeat;
-		}
-	</style>
-	
+	</nav>	
 </head>
 <body>
-	<table id="list">
-		<thead>
-		  <tr>
-			<th>Available Rental Listings</th>			
-		  </tr>
-		</thead>
-		<tbody>
+	
+			<h1>Available Rental Listings</h1>			
+	
+		<!-- <section>
 		  <% houseDocs.forEach(function(h) { %>
-			<tr>
-			  <td><%= h.type %></td>
-			  <td><%= h.address %></td>
-			  <td><%= h.bedsbaths %></td>
-			  <td><%= h.price %></td>
-			  <td><a href="/houses/<%= h._id %>">DETAILS</a></td>
-			</tr>
+			<div>
+			  <img src="<%= h.picture %>" />
+			  <p><%= h.type %></p>
+			  <p><%= h.address %></p>
+			  <p><%= h.bedsbaths %></p>
+			  <p><%= h.price %></p>
+			  <p><a href="/houses/<%= h._id %>">DETAILS</a></p>
+			</div>
 			<% }); %>
-		  </tbody>
+		</section> -->
 		
-		</table>
+		<section>
+			<% houseDocs.forEach(function(h) { %>
+			  <div>
+				<table>
+					<tr><img src="<%= h.picture %>" /></tr>
+					<tr>
+						<th><%= h.price %></th>
+						<th></th>
+					</tr>
+
+					<tr>
+						<td><%= h.bedsbaths %></td>
+						<td><%= h.type %></td>
+					</tr>
+
+					<tr>
+						<td><%= h.address %></td>
+						<td><a href="/houses/<%= h._id %>">DETAILS</a></td>
+					</tr>
+				</table>
+				
+			  </div>
+			  <% }); %>
+		  </section>
   
 
     

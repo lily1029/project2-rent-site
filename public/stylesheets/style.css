@@ -166,3 +166,18 @@ ul {
 li {
   font-weight: bold;
 }
+
+section {
+  border: 1px solid red;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+
+}
+
+section div {
+  border: 1px solid green;
+  width: 700px;
+  margin: 8px;
+
+}

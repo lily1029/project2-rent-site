@@ -101,6 +101,14 @@
 										<form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
 											<button type="submit">X</button>
 										</form>
+                                        
+                                        <a href="/reviews/<%= r._id %>/edit" > Edit Review</a>
+                                        <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+                                            <!-- Value attribute is being set to the reviews's current text -->
+                                            <input name="content" value="<%= r.text %>">
+                                            <button type="submit">UPDATE REVIEW</button>
+                                          </form>
+                                          
 										<% } %>
 								</td>
 								

@@ -27,6 +27,25 @@
 	
 </head>
 <body>
+	<table id="list">
+		<thead>
+		  <tr>
+			<th>Available Rental Listings</th>			
+		  </tr>
+		</thead>
+		<tbody>
+		  <% houseDocs.forEach(function(h) { %>
+			<tr>
+			  <td><%= h.type %></td>
+			  <td><%= h.address %></td>
+			  <td><%= h.bedsbaths %></td>
+			  <td><%= h.price %></td>
+			  <td><a href="/houses/<%= h._id %>">DETAILS</a></td>
+			</tr>
+			<% }); %>
+		  </tbody>
+		
+		</table>
   
 
     

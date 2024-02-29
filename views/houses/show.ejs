@@ -27,26 +27,9 @@
 	
 </head>
 <body>
-  
-    <!-- <h1>Add a New Home to Rent</h1>
-    <form action="/houses" method="POST">
-        <label>Type:
-            <input type="text" name="type">
-        </label><br>
-        <label>Address:
-            <input type="text" name="address">
-        </label><br>
-        <label>Beds/Baths:
-            <input type="text" name="bedsbaths">
-        </label><br>
-        <label>Price:
-            <input type="text" name="price">
-        </label><br>
-        <button type="submit">Add Home</button>
-    </form> -->
 
-
-    <section id="show-page">
+    <!-- <section id="show-page"> -->
+    <section>
 		<div>Type: </div>
 		<div>
             <%= house.type %>
@@ -62,9 +45,72 @@
 		<div>Price: </div>
 		<div>
             <%= house.price %>
-		</div>
-		
+		</div>		
 	</section>
+
+    <br><br>
+
+    <h2>Reviews</h2>
+    
+        <form id="add-review-form" method="POST" action="/houses/<%= house._id %>/reviews">
+			<label>Review:</label>
+			<textarea name="content"></textarea>
+			<label>Rating:</label>
+			<select name="rating">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5" selected>5</option>
+			</select>
+			<input type="submit" value="Add Review">
+		</form>
+
+
+            <% if (house.reviews.length) { %>
+				<table>
+					<thead>
+						<tr>
+							<th>User</th>
+							<th>Date</th>
+							<th>Review</th>
+							<th>Rating</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% house.reviews.forEach(function(r) { %>
+							<tr>
+								<td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>"
+										referrerpolicy="no-referrer">
+									<%= r.userName %>
+								</td>
+								<td>
+									<%= r.createdAt.toLocaleDateString() %>
+								</td>
+								<td>
+									<%= r.createdAt.toLocaleDateString() %>
+								</td>
+								<td>
+									<%= r.content %>
+								</td>
+								<td>
+									<%= r.rating %>
+								</td>
+								<td>
+									<% if (user && user._id.equals(r.user)) { %>
+										<form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+											<button type="submit">X</button>
+										</form>
+										<% } %>
+								</td>
+								
+							</tr>
+							<% }); %>
+					</tbody>
+				</table>
+				<% } else { %>
+					<h5>No Reviews Yet</h5>
+					<% } %>
     
 </body>
 </html>

@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent Site</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<nav>
+		<img src="/images/logo.png" width="879" height="553">
+		<a href="/houses">ALL Homes</a>
+		<% if (user) { %>
+		  <a href="/houses/new"	>
+			  Rent</a>
+		  <a href="/houses/new" >Add NewHome</a>
+		  <a href="/logout">LOG OUT</a>
+		<% } else { %>
+		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" width="20" height="20"></a>
+		<% } %>
+	</nav>
+	<style>
+		body {background-image: url(https://i.imgur.com/9rzdzis.png);
+			  background-size: cover;
+			  background-repeat: no-repeat;
+		}
+	</style>
+	
 </head>
 <body>
-    <a href="/houses" >All Homes</a>
-    <a href="/houses/new" >New Homes</a>
+
     
 </body>
 </html>
+
+
+
+
+
+

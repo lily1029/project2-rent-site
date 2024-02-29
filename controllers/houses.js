@@ -18,7 +18,7 @@ async function show(req, res){
 		// router.get('/:id', houseCtrl.show);
         const houseFromTheDatabase = await HouseModel.findById(req.params.id)
 
-        console.log(houseFromTheDatabase);
+        console.log(houseFromTheDatabase, "houseFromTheDatabase")
 
         res.render("houses/show", {
             house: houseFromTheDatabase,
@@ -41,8 +41,6 @@ async function index(req, res){
         console.log(err)
         res.redirect('/')
     }
-
-    res.render('houses/index')
 }
 
 async function create(req, res){
@@ -58,7 +56,8 @@ async function create(req, res){
 
     } catch (err) {
         console.log(err);
-        res.render("houses/new", {errorMsg: err.message});
+        // res.render("houses/new", {errorMsg: err.message});
+        res.redirect("/houses/new");
 
     }
 }

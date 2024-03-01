@@ -27,19 +27,29 @@
 	
 </head>
 <body>
+	<sidebar>
+		<table >
+			<tr>
+				<td>Type:</td>
+				<td><%= house.type %></td>
+			</tr>
 
-    <!-- <section id="show-page"> -->
-    <section>
-		<div>Type:<%= house.type %> </div>
-		<div>Address:<%= house.address %></div>
-		<div>Beds/Baths:<%= house.bedsbaths %></div>
-		<div>Price:<%= house.price %></div>	
-	</section>
+			<tr>
+				<td>Address:</td>
+				<td><%= house.address %></td>
+			</tr>
 
-    <br><br>
+			<tr>
+				<td>Beds/Baths:</td>
+				<td><%= house.bedsbaths %></td>
+			</tr>
 
-    <h2>Reviews</h2>
-    
+			<tr>
+				<td>Price:</td>
+				<td><%= house.price %></td>
+			</tr>
+		</table>
+	</sidebar>   
         <form id="add-review-form" method="POST" action="/houses/<%= house._id %>/reviews">
 			<label>Review:</label>
 			<textarea name="content"></textarea>
@@ -87,19 +97,20 @@
 								<td>
 									<% if (user && user._id.equals(r.user)) { %>
 										<form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-											<button type="submit">X</button>
-										</form>
-                                        
-                                        <a href="/reviews/<%= r._id %>/edit" > Edit Review</a>
-                                        <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
-                                            <!-- Value attribute is being set to the reviews's current text -->
-                                            <input name="content" value="<%= r.text %>">
-                                            <button type="submit">UPDATE REVIEW</button>
-                                          </form>
-                                          
+											<button type="submit">Delete</button>
+										</form>                                                                  
 										<% } %>
 								</td>
-								
+								<td>
+									<a href="/reviews/<%= r._id %>/edit" > Edit Review</a>
+								</td>
+								<td>
+									<form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+										<!-- Value attribute is being set to the reviews's current text -->
+										<input name="content" value="<%= r.text %>">
+										<button type="submit">Update Review</button>
+									  </form>
+								</td>								
 							</tr>
 							<% }); %>
 					</tbody>

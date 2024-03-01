@@ -35,16 +35,16 @@ nav > img {
 body > main {
   grid-area: main;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: #E8ECEB;
   padding: 20px;
   overflow-y: scroll;
 }
 
-body > main h1:first-child {
+/* body > main h1:first-child {
   margin-bottom: 10px;
-}
+} */
 
 nav > a {
   margin: 20px;
@@ -177,7 +177,7 @@ section {
 
 section div {
   border: 1px solid green;
-  width: 598px;
+  width: 586px;
   margin: 8px 20px 8px 8px;
   align-items: center;
 

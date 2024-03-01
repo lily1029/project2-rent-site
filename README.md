@@ -1,35 +1,20 @@
-# passport-boilerplate
+WELCOME! This is a Rental Resources Site. 
 
+Uses Express, Node.js, MongoDB
 
-This is your passport boilerplate.
+Link -> https://amethyst-goat-hem.cyclic.app/logout
 
-## Setup 
+The object of the site is for people who look for a home to rent. Click the  "Rent" nav bar will list current available rental resources. And for landlords who want to list theirs homes on the site to rent. 
+![Site initial state](https://i.imgur.com/dcJXS8w.png)
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+This page will show all the available homes to rent no matter you login or not. 
+![read all rental resources page](https://i.imgur.com/Ggl65cv.png)
 
+After a registered user(landlord role) log in, the landlord can add his/her prefered home picture on the site for people who want to rent. 
+![Request a form and post a form](https://i.imgur.com/RZPKgLN.png)
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+The landlord user fills up the form and click the "Add Home" button to post his rental property. 
+![post a form](https://i.imgur.com/gS9wqRF.png)
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
-
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
-
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+At last, the users can add a review after seeing the home picture. The landlord users can delete the specifi review and update a specific review. 
+![review page](https://i.imgur.com/WrT0mO9.png)

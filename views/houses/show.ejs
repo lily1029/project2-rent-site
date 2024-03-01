@@ -17,14 +17,7 @@
 		<% } else { %>
 		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png" width="20" height="20"></a>
 		<% } %>
-	</nav>
-	<!-- <style>
-		body {background-image: url(https://i.imgur.com/9rzdzis.png);
-			  background-size: cover;
-			  background-repeat: no-repeat;
-		}
-	</style> -->
-	
+	</nav>	
 </head>
 <body>
 	<sidebar>
@@ -50,6 +43,7 @@
 			</tr>
 		</table>
 	</sidebar>   
+	
         <form id="add-review-form" method="POST" action="/houses/<%= house._id %>/reviews">
 			<label>Review:</label>
 			<textarea name="content"></textarea>

@@ -27,7 +27,7 @@ body > nav {
 }
 
 nav > img {
-  width: 34px;
+  width: 80px;
   object-fit: contain;
   margin-right: auto;
 }
@@ -92,8 +92,8 @@ table thead th {
 }
 
 table td {
-  padding: 10px;
-  text-align: center;
+  padding: 3px; 
+  text-align: left;
 }
 
 #list td:nth-child(2), #list td:nth-child(3){
@@ -168,7 +168,7 @@ li {
 }
 
 section {
-  border: 1px solid red;
+  /* border: 1px solid; */
   display: flex;
   /* flex-direction: column; */
   flex-wrap: wrap;
@@ -176,13 +176,33 @@ section {
 }
 
 section div {
-  border: 1px solid green;
+  border: 1px solid #a9a7a7;
   width: 586px;
   margin: 8px 20px 8px 8px;
   align-items: center;
+  box-shadow: 10px 10px 10px grey;
 
 }
 
 .resize {
   width: 586px;
 }
+
+td {
+  padding-left: 0;
+  text-align: left;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input{
+  width: 300px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+}
+

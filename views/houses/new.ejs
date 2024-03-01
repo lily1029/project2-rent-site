@@ -28,30 +28,34 @@
 </head>
 <body>
   
-    <h2>Add a New Home to Rent</h2>
-    <form action="/houses" method="POST">
-        <label>Picture:
-        <input type="text" name="picture">
-        </label><br>
+    <!-- <h2>Add a New Home to Rent</h2> -->
+	<main> 
+		<form action="/houses" method="POST">
+			<label>Picture:
+			<input type="text" name="picture">
+			</label><br>
+	
+			<label>Type:
+				<input type="text" name="type">
+			</label><br>
+	
+			<label>Address:
+				<input type="text" name="address">
+			</label><br>
+	
+			<label>Beds/Baths:
+				<input type="text" name="bedsbaths">
+			</label><br>
+	
+			<label>Price:
+				<input type="text" name="price">
+			</label><br>
+			
+			<button type="submit">Add Home</button>
+		</form>
 
-        <label>Type:
-            <input type="text" name="type">
-        </label><br>
-
-        <label>Address:
-            <input type="text" name="address">
-        </label><br>
-
-        <label>Beds/Baths:
-            <input type="text" name="bedsbaths">
-        </label><br>
-
-        <label>Price:
-            <input type="text" name="price">
-        </label><br>
-        
-        <button type="submit">Add Home</button>
-    </form>
+	</main>
+    
     
 </body>
 </html>

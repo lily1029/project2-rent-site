@@ -72,7 +72,7 @@ nav > a.active {
 #add-review-form *,
 #add-performer-form * {
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
 }
 
@@ -200,7 +200,7 @@ main {
 }
 form input{
   width: 300px;
-  height: 50px;
+  height: 45px;
 }
 
 label {
@@ -209,7 +209,9 @@ label {
 }
 
 sidebar {
-  border: 1px solid rgb(24, 199, 76);
+  border: 1px solid grey;
   width: 100%;
   height: 200px;
+  margin-left: 10px;
+  margin-bottom: -100px;
 }
